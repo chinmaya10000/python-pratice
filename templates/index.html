@@ -1,0 +1,18 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="cake">
+        {{ cake | safe }}
+    </div>
+    <div class="message">
+        {{ message | safe }}
+    </div>
+    <button id="partyButton">Let's Celebrate!</button>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
