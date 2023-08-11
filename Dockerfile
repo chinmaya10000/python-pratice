@@ -8,6 +8,13 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
+# Install virtualenv and create a virtual environment
+RUN pip install virtualenv
+RUN virtualenv venv
+
+# Use the virtual environment
+RUN . venv/bin/activate
+
 # Install Flask
 RUN pip install Flask
 
